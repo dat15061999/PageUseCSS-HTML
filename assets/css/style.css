@@ -1,0 +1,501 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: Helvetica, Arial, sans-serif;
+}
+/* common */
+.clear {
+  clear: both;
+}
+.text-white {
+  color: #fff !important;
+}
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.col-half {
+  width: 50%;
+}
+.col-third {
+  width: 33.333%;
+}
+.col-full {
+  width: 100%;
+}
+/* normal */
+#main {
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 46px;
+  background-color: #000;
+  z-index: 1;
+}
+#nav {
+  display: inline-block;
+}
+#nav li {
+  list-style-type: none;
+}
+#nav > li {
+  display: inline-block;
+  position: relative;
+}
+#nav > li > a {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+}
+
+#nav li a {
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0 24px;
+}
+#nav .subnav li:hover a,
+#nav > li:hover > a {
+  color: #000;
+  background-color: #ccc;
+}
+#nav li:hover .subnav {
+  display: block;
+}
+#nav .subnav {
+  min-width: 160px;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav li a {
+  display: block;
+  color: #000;
+  padding: 0 24px;
+  line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+  font-size: 14px;
+}
+#header .search-btn {
+  float: right;
+  padding: 0 24px;
+}
+#header .search-btn:hover {
+  cursor: pointer;
+  background-color: #f44336;
+}
+#header .search-icon {
+  color: #fff;
+  line-height: 46px;
+  font-size: 20px;
+}
+
+#slider {
+  position: relative;
+  margin-top: 46px;
+  padding-top: 50%;
+  background: url("https://www.w3schools.com/w3images/ny.jpg") top center /
+    cover no-repeat;
+}
+#slider .text-content {
+  position: absolute;
+  bottom: 32px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+#slider .text-heading {
+  font-weight: 500;
+}
+#slider .text-description {
+  margin-top: 38px;
+  font-weight: 600;
+}
+#content {
+}
+#content .content-section {
+  padding: 64px 0 112px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#content .section-heading {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 6px;
+  font-weight: 500;
+}
+#content .section-sub-heading {
+  text-align: center;
+  margin-top: 25px;
+  font-style: italic;
+  opacity: 0.6;
+  font-size: 15px;
+}
+#content .about-text {
+  text-align: justify;
+  font-size: 15px;
+  margin-top: 25px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+#content .member-list {
+  margin-top: 48px;
+  text-align: center;
+}
+#content .member-item {
+  float: right;
+  width: 33.333%;
+}
+#content .member-name {
+  margin: 15px 0;
+}
+#content .member-image img {
+  width: 154px;
+  border-radius: 4px;
+}
+#content .tickets-list {
+  margin-top: 30px;
+  list-style: none;
+  background-color: #fff;
+}
+#content .tickets-list li {
+  padding: 11px 16px;
+  border: 1px solid #ddd;
+  color: #757575;
+  font-size: 15px;
+  width: 100%;
+}
+.tickets-list .sold-out {
+  padding: 4px 6px;
+  margin-left: 16px;
+  background-color: #f44336;
+  color: #fff;
+}
+.tickets-list .quantity {
+  float: right;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 100%;
+  line-height: 24px;
+  text-align: center;
+  margin-top: -3px;
+}
+.tour-dates {
+  background-color: #000;
+}
+.places-list {
+  margin: 32px -8px 48px;
+}
+.places-item {
+  float: right;
+  width: 33.333%;
+  padding: 0 8px;
+}
+.places-image {
+  width: 100%;
+  display: block;
+}
+.places-image:hover {
+  opacity: 0.6;
+}
+.places-content {
+  background-color: #fff;
+  padding: 16px;
+  font-size: 15px;
+}
+.places-content-heading {
+  font-weight: 600;
+}
+.places-content-time {
+  color: #757575;
+  padding: 15px 0;
+}
+.places-content-desc {
+}
+.buy-ticket {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 11px 16px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.buy-ticket:hover {
+  color: #000;
+  background-color: #ccc;
+}
+.modal {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-container {
+  width: 900px;
+  max-width: calc(100% - 32px);
+  background: #fff;
+  min-height: 200px;
+  animation: modalFadeIn ease 1s;
+}
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #009688;
+  color: #fff;
+  padding: 32px 16px;
+}
+.modal-icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.modal-icon-close:hover {
+  cursor: pointer;
+  background-color: #ccc;
+  opacity: 0.6;
+}
+.modal-heading {
+  font-size: 30px;
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+}
+.modal-icon-bag {
+  margin-right: 16px;
+}
+.modal-body {
+  padding: 16px;
+  font-size: 15px;
+}
+.modal-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 12px;
+}
+.modal-label i {
+  font-weight: 600;
+}
+.modal-input {
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 26px;
+  border: 1px solid #ccc;
+}
+.modal-pay {
+  width: 100%;
+  padding: 12px;
+  background-color: #009688;
+  color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.modal-footer {
+  padding: 16px;
+  text-align: right;
+}
+.modal-footer-link {
+  color: blue;
+}
+.modal.open {
+  display: flex;
+}
+.modal.close {
+  display: none;
+}
+.contact-container {
+  padding: 48px 0;
+}
+.contact-container .form-control {
+  width: 100%;
+}
+.contact-container .contact-text {
+  font-weight: 500;
+  font-size: 18px;
+}
+.contact-container .contact-left {
+  line-height: 1.5;
+}
+.contact-text i {
+  font-weight: 500;
+  width: 32px;
+  display: inline-block;
+}
+.contact-right .form-control {
+  font-size: 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+.contact-right .form-submit {
+  font-weight: 500;
+  float: right;
+  color: #fff;
+  padding: 11px 16px;
+  border: 1px solid #ccc;
+  background-color: #000;
+}
+.contact-right .form-submit:hover {
+  color: #000;
+  cursor: pointer;
+  background-color: #ccc;
+}
+.map img {
+  width: 100%;
+}
+.my-16 {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+#footer {
+  padding: 64px 0;
+  text-align: center;
+}
+#footer .footer-social {
+}
+#footer .footer-social a {
+  text-decoration: none;
+}
+#footer .footer-social a i {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.6);
+}
+#footer .footer-copyright {
+  margin-top: 24px;
+  color: rgba(0, 0, 0, 0.6);
+}
+#footer .footer-copyright a {
+  color: rgba(0, 0, 0, 0.6);
+}
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.sidebar__label {
+  margin-left: 16px;
+  color: #fff;
+  line-height: 46px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.screen-dark {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  animation: fadeIn linear 0.3s;
+}
+
+.sidebar__input:checked ~ .screen-dark {
+  display: block;
+}
+.sidebar__input:checked ~ .sidebar__container {
+  transform: translateX(0);
+  opacity: 1;
+}
+.sidebar__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 320px;
+  max-width: 100%;
+  background-color: #fff;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform linear 0.2s, opacity linear 0.2s;
+}
+.sidebar__container .sidebar__heading {
+  float: right;
+  padding: 16px;
+  cursor: pointer;
+  clear: both;
+}
+.sidebar__container .sidebar__heading:hover {
+  background-color: #ccc;
+}
+.sidebar__container .sidebar__content {
+  padding: 32px;
+}
+.sidebar__content .sidebar__list {
+  list-style-type: none;
+  margin-top: 48px;
+}
+.sidebar__content .sidebar_item {
+  margin-bottom: 16px;
+  padding: 6px 12px;
+}
+.sidebar__content .sidebar_item:hover {
+  background-color: #ccc;
+}
+.sidebar__content .sidebar_item a {
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+}
+@media only screen and (max-width: 1023px) {
+  #header #nav,
+  #header .search-btn {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #header .sidebar__label {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

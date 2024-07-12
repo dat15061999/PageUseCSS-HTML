@@ -1,0 +1,28 @@
+body {
+  margin: 0 auto;
+}
+.main {
+  display: flex;
+}
+.sidebar {
+  width: 300px;
+}
+.content {
+  width: calc(100% - 300px);
+}
+.content p {
+  margin-bottom: 20px;
+}
+.item {
+  padding: 12px;
+  background-color: orange;
+  text-align: center;
+}
+.content-banner,
+.mb-16 {
+  margin-bottom: 16px;
+}
+.content-banner {
+  padding: 12px;
+  background-color: #ccc;
+}
